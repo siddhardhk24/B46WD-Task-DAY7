@@ -1,0 +1,28 @@
+Print the country which uses US Dollars as currency.
+
+My code:
+
+ANS:
+var usd = new XMLHttpRequest();
+usd.open("GET", "https://restcountries.com/v3.1/all");
+usd.send();
+usd.onload = () => {
+    let data = JSON.parse(usd.response);
+     
+    let ans = data.filter((item) => (item.currencies !== undefined))
+    
+    let realanswer = ans.filter((data) =>  {
+    for (let key in data.currencies) {
+        if(data.currencies[key].name === "United States dollar"){
+            return data;
+      }
+    }
+    })
+   
+      console.log(realanswer); 
+}
+
+
+Output:
+20 
+countries Details
