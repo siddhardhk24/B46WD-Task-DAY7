@@ -1,0 +1,78 @@
+1)Get all the countries from the Asia continent /region using the Filter function
+
+ANS:
+My code:
+
+var con = new XMLHttpRequest;
+con.open('GET', 'https://restcountries.com/v3.1/all');
+con.responseType = 'json';
+con.send();
+con.onload = function()
+{
+    var respObj = con.response;
+
+    var asia_cont = respObj.filter(function(item)
+    {
+        return item.continents == 'Asia';
+    })
+
+    var asia_coun = asia_cont.map(function(item1)
+    {
+      console.log(item1.name.common);
+    })   
+}
+
+output:
+
+ Singapore
+ Maldives
+ Cocos (Keeling) Islands
+ Jordan
+ Bangladesh
+ Bhutan
+ India
+ Cambodia
+ Israel
+ Turkey
+ Macau
+ Myanmar
+ Lebanon
+ Philippines
+ Kazakhstan
+ Tajikistan
+ Azerbaijan
+ Afghanistan
+ Qatar
+ Yemen
+ Iran
+ Syria
+ North Korea
+ Bahrain
+ Georgia
+ Mongolia
+ Indonesia
+ Armenia
+ United Arab Emirates
+ Pakistan
+ Turkmenistan
+ Brunei
+ Kuwait
+ Saudi Arabia
+ Malaysia
+ Nepal
+ Kyrgyzstan
+ Hong Kong
+ Vietnam
+ Japan
+ British Indian Ocean Territory
+ China
+ Laos
+ Palestine
+ Iraq
+ Thailand
+ Uzbekistan
+ Sri Lanka
+ Christmas Island
+ Taiwan
+ South Korea
+ Oman
