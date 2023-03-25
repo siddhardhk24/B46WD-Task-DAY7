@@ -1,0 +1,271 @@
+3)Print the following details name, capital, flag using forEach function
+
+ANS:
+My code:
+
+var cont= new XMLHttpRequest();
+cont.open('GET', 'https://restcountries.com/v3.1/all');
+cont.responseType = 'json';
+
+cont.send();
+
+cont.onload = function () 
+{ 
+  var respObj = cont.response;
+   respObj.forEach(function(item) {
+      console.log(`${item.name.common}, ${item.capital}, ${item.flag}`);
+ });
+}
+
+
+output:
+ Guatemala, Guatemala City, 🇬🇹
+ Singapore, Singapore, 🇸🇬
+ Bosnia and Herzegovina, Sarajevo, 🇧🇦
+ Maldives, Malé, 🇲🇻
+ Latvia, Riga, 🇱🇻
+ Greece, Athens, 🇬🇷
+ Cocos (Keeling) Islands, West Island, 🇨🇨
+ Mayotte, Mamoudzou, 🇾🇹
+ Jordan, Amman, 🇯🇴
+ Bangladesh, Dhaka, 🇧🇩
+ American Samoa, Pago Pago, 🇦🇸
+ Italy, Rome, 🇮🇹
+ Algeria, Algiers, 🇩🇿
+ France, Paris, 🇫🇷
+ Bhutan, Thimphu, 🇧🇹
+ São Tomé and Príncipe, São Tomé, 🇸🇹
+ Nauru, Yaren, 🇳🇷
+ Gabon, Libreville, 🇬🇦
+ New Caledonia, Nouméa, 🇳🇨
+ Norway, Oslo, 🇳🇴
+ Tuvalu, Funafuti, 🇹🇻
+ India, New Delhi, 🇮🇳
+ Cambodia, Phnom Penh, 🇰🇭
+ Mauritius, Port Louis, 🇲🇺
+ DR Congo, Kinshasa, 🇨🇩
+ San Marino, City of San Marino, 🇸🇲
+ Panama, Panama City, 🇵🇦
+ Netherlands, Amsterdam, 🇳🇱
+ Puerto Rico, San Juan, 🇵🇷
+ Nicaragua, Managua, 🇳🇮
+ Réunion, Saint-Denis, 🇷🇪
+ Sierra Leone, Freetown, 🇸🇱
+ Barbados, Bridgetown, 🇧🇧
+ Israel, Jerusalem, 🇮🇱
+ Western Sahara, El Aaiún, 🇪🇭
+ Anguilla, The Valley, 🇦🇮
+ Rwanda, Kigali, 🇷🇼
+ Turkey, Ankara, 🇹🇷
+ Marshall Islands, Majuro, 🇲🇭
+ Mozambique, Maputo, 🇲🇿
+ Nigeria, Abuja, 🇳🇬
+ Russia, Moscow, 🇷🇺
+ Cuba, Havana, 🇨🇺
+ Jersey, Saint Helier, 🇯🇪
+ British Virgin Islands, Road Town, 🇻🇬
+ Costa Rica, San José, 🇨🇷
+ Saint Pierre and Miquelon, Saint-Pierre, 🇵🇲
+ El Salvador, San Salvador, 🇸🇻
+ Cook Islands, Avarua, 🇨🇰
+ Niue, Alofi, 🇳🇺
+ Slovenia, Ljubljana, 🇸🇮
+ Papua New Guinea, Port Moresby, 🇵🇬
+ Honduras, Tegucigalpa, 🇭🇳
+ Macau, undefined, 🇲🇴
+ Portugal, Lisbon, 🇵🇹
+ Trinidad and Tobago, Port of Spain, 🇹🇹
+ Gambia, Banjul, 🇬🇲
+ Myanmar, Naypyidaw, 🇲🇲
+ Egypt, Cairo, 🇪🇬
+ Lebanon, Beirut, 🇱🇧
+ Kenya, Nairobi, 🇰🇪
+ Equatorial Guinea, Malabo, 🇬🇶
+ United States Virgin Islands, Charlotte Amalie, 🇻🇮
+ Croatia, Zagreb, 🇭🇷
+ United States, Washington, D.C., 🇺🇸
+ Caribbean Netherlands, Kralendijk, 🇧🇶
+ Philippines, Manila, 🇵🇭
+ Kazakhstan, Nur-Sultan, 🇰🇿
+ Kosovo, Pristina, 🇽🇰
+ Argentina, Buenos Aires, 🇦🇷
+ Tajikistan, Dushanbe, 🇹🇯
+ Azerbaijan, Baku, 🇦🇿
+ Romania, Bucharest, 🇷🇴
+ Chile, Santiago, 🇨🇱
+ Cyprus, Nicosia, 🇨🇾
+ Cape Verde, Praia, 🇨🇻
+ Bulgaria, Sofia, 🇧🇬
+ Uruguay, Montevideo, 🇺🇾
+ North Macedonia, Skopje, 🇲🇰
+ Afghanistan, Kabul, 🇦🇫
+ Botswana, Gaborone, 🇧🇼
+ Antarctica, undefined, 🇦🇶
+ Canada, Ottawa, 🇨🇦
+ Mauritania, Nouakchott, 🇲🇷
+ Qatar, Doha, 🇶🇦
+ Spain, Madrid, 🇪🇸
+ Yemen, Sana'a, 🇾🇪
+ Somalia, Mogadishu, 🇸🇴
+ Sweden, Stockholm, 🇸🇪
+ Liechtenstein, Vaduz, 🇱🇮
+ South Georgia, King Edward Point, 🇬🇸
+ Morocco, Rabat, 🇲🇦
+ Madagascar, Antananarivo, 🇲🇬
+ Ukraine, Kyiv, 🇺🇦
+ Iran, Tehran, 🇮🇷
+ Poland, Warsaw, 🇵🇱
+ Chad, N'Djamena, 🇹🇩
+ Vanuatu, Port Vila, 🇻🇺
+ Palau, Ngerulmud, 🇵🇼
+ Peru, Lima, 🇵🇪
+ Eswatini, Mbabane, 🇸🇿
+ Martinique, Fort-de-France, 🇲🇶
+ Luxembourg, Luxembourg, 🇱🇺
+ Djibouti, Djibouti, 🇩🇯
+ Haiti, Port-au-Prince, 🇭🇹
+ Syria, Damascus, 🇸🇾
+ Gibraltar, Gibraltar, 🇬🇮
+ Mexico, Mexico City, 🇲🇽
+ Iceland, Reykjavik, 🇮🇸
+ Fiji, Suva, 🇫🇯
+ North Korea, Pyongyang, 🇰🇵
+ Solomon Islands, Honiara, 🇸🇧
+ United States Minor Outlying Islands, Washington DC, 🇺🇲
+ Guinea, Conakry, 🇬🇳
+ Saint Kitts and Nevis, Basseterre, 🇰🇳
+ French Southern and Antarctic Lands, Port-aux-Français, 🇹🇫
+ Bahrain, Manama, 🇧🇭
+ Lithuania, Vilnius, 🇱🇹
+ Georgia, Tbilisi, 🇬🇪
+ Serbia, Belgrade, 🇷🇸
+ Central African Republic, Bangui, 🇨🇫
+ Mali, Bamako, 🇲🇱
+ Mongolia, Ulan Bator, 🇲🇳
+ Dominica, Roseau, 🇩🇲
+ Greenland, Nuuk, 🇬🇱
+ Ethiopia, Addis Ababa, 🇪🇹
+ Libya, Tripoli, 🇱🇾
+ Namibia, Windhoek, 🇳🇦
+ Moldova, Chișinău, 🇲🇩
+ Bolivia, Sucre, 🇧🇴
+ Dominican Republic, Santo Domingo, 🇩🇴
+ Curaçao, Willemstad, 🇨🇼
+ Indonesia, Jakarta, 🇮🇩
+ Belarus, Minsk, 🇧🇾
+ Bouvet Island, undefined, 🇧🇻
+ Republic of the Congo, Brazzaville, 🇨🇬
+ Liberia, Monrovia, 🇱🇷
+ Malta, Valletta, 🇲🇹
+ Saint Martin, Marigot, 🇲🇫
+ South Africa, Pretoria,Bloemfontein,Cape Town, 🇿🇦
+ Togo, Lomé, 🇹🇬
+ Armenia, Yerevan, 🇦🇲
+ Saint Helena, Ascension and Tristan da Cunha, Jamestown, 🇸🇭
+ Albania, Tirana, 🇦🇱
+ Andorra, Andorra la Vella, 🇦🇩
+ South Sudan, Juba, 🇸🇸
+ Guernsey, St. Peter Port, 🇬🇬
+ United Arab Emirates, Abu Dhabi, 🇦🇪
+ Czechia, Prague, 🇨🇿
+ Guadeloupe, Basse-Terre, 🇬🇵
+ Grenada, St. George's, 🇬🇩
+ Pakistan, Islamabad, 🇵🇰
+ Vatican City, Vatican City, 🇻🇦
+ Wallis and Futuna, Mata-Utu, 🇼🇫
+ Svalbard and Jan Mayen, Longyearbyen, 🇸🇯
+ Cameroon, Yaoundé, 🇨🇲
+ Jamaica, Kingston, 🇯🇲
+ Comoros, Moroni, 🇰🇲
+ Falkland Islands, Stanley, 🇫🇰
+ Turkmenistan, Ashgabat, 🇹🇲
+ Brunei, Bandar Seri Begawan, 🇧🇳
+ Antigua and Barbuda, Saint John's, 🇦🇬
+ Ghana, Accra, 🇬🇭
+ Kuwait, Kuwait City, 🇰🇼
+ Eritrea, Asmara, 🇪🇷
+ Zimbabwe, Harare, 🇿🇼
+ Tanzania, Dodoma, 🇹🇿
+ Estonia, Tallinn, 🇪🇪
+ Belize, Belmopan, 🇧🇿
+ Saudi Arabia, Riyadh, 🇸🇦
+ New Zealand, Wellington, 🇳🇿
+ Turks and Caicos Islands, Cockburn Town, 🇹🇨
+ Colombia, Bogotá, 🇨🇴
+ Malaysia, Kuala Lumpur, 🇲🇾
+ Bermuda, Hamilton, 🇧🇲
+ Austria, Vienna, 🇦🇹
+ Samoa, Apia, 🇼🇸
+ Uganda, Kampala, 🇺🇬
+ Nepal, Kathmandu, 🇳🇵
+ Paraguay, Asunción, 🇵🇾
+ Australia, Canberra, 🇦🇺
+ Faroe Islands, Tórshavn, 🇫🇴
+ United Kingdom, London, 🇬🇧
+ Tokelau, Fakaofo, 🇹🇰
+ Zambia, Lusaka, 🇿🇲
+ Saint Lucia, Castries, 🇱🇨
+ Isle of Man, Douglas, 🇮🇲
+ Kyrgyzstan, Bishkek, 🇰🇬
+ French Polynesia, Papeetē, 🇵🇫
+ Ecuador, Quito, 🇪🇨
+ Hong Kong, City of Victoria, 🇭🇰
+ Northern Mariana Islands, Saipan, 🇲🇵
+ Timor-Leste, Dili, 🇹🇱
+ Saint Vincent and the Grenadines, Kingstown, 🇻🇨
+ Vietnam, Hanoi, 🇻🇳
+ Heard Island and McDonald Islands, undefined, 🇭🇲
+ Ireland, Dublin, 🇮🇪
+ Finland, Helsinki, 🇫🇮
+ Japan, Tokyo, 🇯🇵
+ British Indian Ocean Territory, Diego Garcia, 🇮🇴
+ Norfolk Island, Kingston, 🇳🇫
+ Brazil, Brasília, 🇧🇷
+ Montenegro, Podgorica, 🇲🇪
+ Guyana, Georgetown, 🇬🇾
+ Slovakia, Bratislava, 🇸🇰
+ Guam, Hagåtña, 🇬🇺
+ Monaco, Monaco, 🇲🇨
+ China, Beijing, 🇨🇳
+ Aruba, Oranjestad, 🇦🇼
+ Laos, Vientiane, 🇱🇦
+ Venezuela, Caracas, 🇻🇪
+ Palestine, Ramallah,Jerusalem, 🇵🇸
+ Sint Maarten, Philipsburg, 🇸🇽
+ Hungary, Budapest, 🇭🇺
+ Germany, Berlin, 🇩🇪
+ Tonga, Nuku'alofa, 🇹🇴
+ Iraq, Baghdad, 🇮🇶
+ Thailand, Bangkok, 🇹🇭
+ Tunisia, Tunis, 🇹🇳
+ Burundi, Gitega, 🇧🇮
+ Switzerland, Bern, 🇨🇭
+ Åland Islands, Mariehamn, 🇦🇽
+ Benin, Porto-Novo, 🇧🇯
+ Kiribati, South Tarawa, 🇰🇮
+ Sudan, Khartoum, 🇸🇩
+ Uzbekistan, Tashkent, 🇺🇿
+ Burkina Faso, Ouagadougou, 🇧🇫
+ Sri Lanka, Sri Jayawardenepura Kotte, 🇱🇰
+ Niger, Niamey, 🇳🇪
+ Suriname, Paramaribo, 🇸🇷
+ Angola, Luanda, 🇦🇴
+ Ivory Coast, Yamoussoukro, 🇨🇮
+ Cayman Islands, George Town, 🇰🇾
+ Lesotho, Maseru, 🇱🇸
+ Montserrat, Plymouth, 🇲🇸
+ Malawi, Lilongwe, 🇲🇼
+ Bahamas, Nassau, 🇧🇸
+ Guinea-Bissau, Bissau, 🇬🇼
+ Saint Barthélemy, Gustavia, 🇧🇱
+ Seychelles, Victoria, 🇸🇨
+ Christmas Island, Flying Fish Cove, 🇨🇽
+ Micronesia, Palikir, 🇫🇲
+ Belgium, Brussels, 🇧🇪
+ French Guiana, Cayenne, 🇬🇫
+ Taiwan, Taipei, 🇹🇼
+ South Korea, Seoul, 🇰🇷
+ Denmark, Copenhagen, 🇩🇰
+ Oman, Muscat, 🇴🇲
+ Pitcairn Islands, Adamstown, 🇵🇳
+ Senegal, Dakar, 🇸🇳
