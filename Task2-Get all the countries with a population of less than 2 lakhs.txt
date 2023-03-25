@@ -1,0 +1,85 @@
+Get all the countries with a population of less than 2 lakhs using Filter function
+
+ANS:
+My code:
+
+var con = new XMLHttpRequest;
+con.open('GET', 'https://restcountries.com/v3.1/all');
+con.responseType = 'json';
+con.send();
+con.onload = function()
+{
+    var respObj = con.response;
+
+    var pop = respObj.filter(function(item)
+    {
+        return item.population < 200000;
+        
+    })      
+
+    var population1 = pop.map(function(item)
+    {
+      console.log(item.name.common);
+    })
+}
+
+
+Output:
+
+  Cocos (Keeling) Islands
+  American Samoa
+  Nauru
+  Tuvalu
+  San Marino
+  Anguilla
+  Marshall Islands
+  Jersey
+  British Virgin Islands
+  Saint Pierre and Miquelon
+  Cook Islands
+  Niue
+  United States Virgin Islands
+  Caribbean Netherlands
+  Antarctica
+  Liechtenstein
+  South Georgia
+  Palau
+  Gibraltar
+  United States Minor Outlying Islands
+  Saint Kitts and Nevis
+  French Southern and Antarctic Lands
+  Dominica
+  Greenland
+  Curaçao
+  Bouvet Island
+  Saint Martin
+  Saint Helena, Ascension and Tristan da Cunha
+  Andorra
+  Guernsey
+  Grenada
+  Vatican City
+  Wallis and Futuna
+  Svalbard and Jan Mayen
+  Falkland Islands
+  Antigua and Barbuda
+  Turks and Caicos Islands
+  Bermuda
+  Samoa
+  Faroe Islands
+  Tokelau
+  Saint Lucia
+  Isle of Man
+  Northern Mariana Islands
+  Saint Vincent and the Grenadines
+  Heard Island and McDonald Islands
+  British Indian Ocean Territory
+  Norfolk Island
+  Guam
+  Monaco
+  Aruba
+  Sint Maarten
+  Tonga
+  Åland Islands
+  Kiribati
+  Cayman Islands
+  Montserrat
