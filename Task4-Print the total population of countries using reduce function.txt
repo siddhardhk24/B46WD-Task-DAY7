@@ -1,0 +1,32 @@
+4)Print the total population of countries using reduce function
+
+ANS:
+My code:
+
+var pop = new XMLHttpRequest();
+pop.open('GET', 'https://restcountries.com/v3.1/all');
+pop.responseType = 'json';
+pop.send();
+
+pop.onload = function()
+{
+    var respObj = pop.response;
+    var res = respObj.map(function(item)
+    {
+        return item.population;
+
+    })
+    var total_pop = res.reduce(function(pop1,pop2)
+    {
+
+        return pop1 + pop2;
+
+    })
+
+    console.log(total_pop)
+};
+
+
+Output:
+
+7777721563 (Total population)
